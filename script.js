@@ -1,7 +1,7 @@
 function calculateEGFR(age, gender, race, serumCreatinine) {
   let egfr;
-  if (race == Black) {
-    if (gender == Male) {
+  if (race == 'black') {
+    if (gender == 'male') {
       if (serumCreatinine <= 0.9) {
         egfr = 163 * ((serumCreatinine / 0.9) ** -0.411) * ((0.993)**age)
       } else {
@@ -15,7 +15,7 @@ function calculateEGFR(age, gender, race, serumCreatinine) {
       }
     }
   } else {
-    if (gender == Male) {
+    if (gender == 'male') {
       if (serumCreatinine <= 0.9) {
         egfr = 141 * ((serumCreatinine / 0.9) ** -0.411) * ((0.993)**age)
       } else {
