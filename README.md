@@ -1,1 +1,1 @@
-# webdev
+# HealthBuddy Web Application
