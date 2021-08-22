@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>eGFR Calculator</title>
+  </head>
+  <body>
+    <h1 class='header'><b>HealthBuddy</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" type="text/javascript"></script>
-  <title>eGFR Calculator</title>
-</head>
-<body>
-  <h1>HealthBuddy</h1>
-  <h2>eGFR Calculator</h2>
-
-  <h3>Age</h3>
-  <input type="number" name="age" id="age_input">
-  <h3>Gender</h3>
-  <input type="text" name="gender" id="gender_input">
-  <h3>Serum Creatinine</h3>
-  <input type="number" name="sc" id="sc_input">
-  <h3>Race</h3>
-  <input type="text" name="race" id="race_input">
-</body>
+    <h2>eGFR Calculator</h2>
+    
+    <form class="user_form">
+      <h3>Please Enter the Following Information:</h3>
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age_input" required>
+    
+      <label for="gender">Gender</label>
+      <select id="gender_input" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>     
+      
+      <label for="sc">Serum Creatinine</label>
+      <input type="number" name="sc" id="sc_input" step="any" required>
+      
+      <label for="ethnicity">Ethnicity</label>
+      <select id="ethnicity_input" name="ethnicity" required>
+        <option value="black">Black</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <input class="button" type="submit" value="Calculate">
+      <p id="result"></p>
+    </form>
+    <script src="script.js"></script>
+  </body>
 </html>
